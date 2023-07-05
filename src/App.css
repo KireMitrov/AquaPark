@@ -1,11 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap:32px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .main-container label {
+  display: block;
+}
+.main-container input{
+  padding: 8px;
+  display: block;
+} */
+
+.btns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btns button {
+  padding: 12px;
+  border-radius: 6px;
 }
