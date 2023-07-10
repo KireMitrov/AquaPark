@@ -1,25 +1,31 @@
 import React, { useState } from "react";
-// import wave from "./wave.wav"
+import wave from "./wave.wav"
 
-function AquaPark () {
-    const [number,SetNumber] = useState(null);
-    // const waveSound = new Audio(wave);
-   
+function AquaPark() {
+    const [number, SetNumber] = useState(null);
+    const waveSound = new Audio(wave);
+
 
     const setNotification = (num, time) => {
-        setTimeout( () => {
-            // waveSound.play()
+        
+        setTimeout(() => {
+            waveSound.play();
             alert(`${num} has finished`);
-        },time)
+        }, time);
+
+        setTimeout(() => {
+            waveSound.play();
+        }, time - 1000);
+        
     }
-    
+
 
     return (
         <div className="main-container">
             <h1>Aqua Park Monitoring</h1>
             <div className="inputs">
                 <label>Enter bracelet number</label>
-                <input type="number" value={number} onChange={ (e) => SetNumber(e.target.value)}/>
+                <input type="number" value={number} onChange={(e) => SetNumber(e.target.value)} />
             </div>
             <div className="btns">
                 <button onClick={() => setNotification(number, 15000)}>15s</button>

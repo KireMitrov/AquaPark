@@ -30,13 +30,10 @@
   align-items: center;
 }
 
-/* .main-container label {
-  display: block;
-}
+
 .main-container input{
-  padding: 8px;
-  display: block;
-} */
+  padding: 6px;
+}
 
 .btns {
   width: 100%;
